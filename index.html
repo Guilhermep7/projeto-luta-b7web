@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Projeto Luta - Funcional</title>
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="shortcut icon" href="assets/images/sword-icon.svg" type="image/x-icon">
+</head>
+<body>
+   <main id="fightArea">
+      <section id="fighter1" class="fighters">
+         <div class="topInfo">
+            <div class="lifeBar">
+               <div class="bar"></div>
+            </div>
+            <span class="wins" id="winsFighter1">0</span>
+         </div>
+         <div class="othersInfo" id="othersInfo1">
+            <div id="powerFighter1">
+               <div id="reset">RESETAR</div>
+               <div class="powerInfo">
+                  <p id="attackPowerFighter1">10</p>
+                  <img src="assets/images/sword-icon.svg" alt="">
+               </div>
+               <div class="powerInfo">
+                  <p id="defensePowerFighter1">8</p>
+                  <img src="assets/images/shield-icon.svg" alt="">
+               </div>
+            </div>
+            <div class="hpFighters" id="hpFighter1">100 <span>HP</span></div>
+            <div class="name" id="nameFighter1">BONIEKY</div>
+         </div>
+         <div class="visualArea">
+            <div class="imgArea">
+               <img src="assets/images/imgBonieky.gif" id="imgFighter1" class="img" alt="imagem lutador 1">
+            </div>
+            <div class="btnArea">
+               <button class="attackBtn">ATACAR</button>
+            </div>
+         </div>
+      </section>
+      <section id="fighter2" class="fighters">
+         <div class="topInfo">
+            <span class="wins" id="winsFighter2">0</span>
+            <div class="lifeBar">
+               <div class="bar"></div>
+            </div>
+         </div>
+         <div class="othersInfo" id="othersInfo2">
+            <div class="name" id="nameFighter2">BLANKA</div>
+            <div class="hpFighters" id="hpFighter2">100 <span>HP</span></div>
+            <div id="powerFighter2">
+               <div class="powerInfo">
+                  <p id="attackPowerFighter2">12</p>
+                  <img src="assets/images/sword-icon.svg" alt="">
+               </div>
+               <div class="powerInfo">
+                  <p id="defensePowerFighter2">6</p>
+                  <img src="assets/images/shield-icon.svg" alt="">
+               </div>
+            </div>
+         </div>
+         <div class="visualArea">
+            <div class="imgArea">
+               <img src="assets/images/imgBlanka.gif" id="imgFighter2" class="img" alt="imagem lutador 2">
+            </div>
+            <div class="btnArea">
+               <button class="attackBtn">ATACAR</button>
+            </div>
+         </div>
+      </section>
+   </main>
+   <section class="logSection">
+      <ul class="log">É possível jogar usando os números 1 e 2 do teclado</ul>
+   </section>
+   <div class="audioArea">
+      <audio src="assets/audio/audioFight.mp3" id="audioFight"></audio>
+      <audio src="assets/audio/audioFighter1.mp3" id="audioFighter1"></audio>
+      <audio src="assets/audio/audioFighter2.mp3" id="audioFighter2"></audio>
+      <audio src="assets/audio/audioKo.mp3" id="audioKO"></audio>
+      <audio src="assets/audio/audioToasty.mp3" id="audioToasty"></audio>
+   </div>
+   <script src="assets/js/functions.js"></script>
+   <script src="assets/js/script.js"></script>
+</body>
+</html>

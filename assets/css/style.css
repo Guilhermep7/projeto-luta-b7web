@@ -1,0 +1,269 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+html::-webkit-scrollbar {
+   width: 12px;
+}
+html::-webkit-scrollbar-track{
+   background: #222222;
+}
+html::-webkit-scrollbar-thumb{
+   background: #444444;
+}
+body {
+   background: #23242c;
+}
+#fightArea{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   max-width: 1500px;
+   margin: 0 auto;
+   padding: 5px;
+   border: 3px solid #350303;
+   background-image: url(../images/background2.png);
+   background-size: cover;
+   background-position: bottom;
+}
+#fighter1, #fighter2 {
+   flex: 1;
+}
+#imgFighter1, #imgFighter2{
+   transition: 0.2s;
+}
+.topInfo{
+   display: flex;
+}
+.lifeBar {
+   width: 100%;
+   height: 20px;
+   border: 2px solid #000000;
+   background-color: #971010;
+}
+.bar {
+   background-color: #14d814;
+   width: 75%;
+   height: 100%;
+   transition: 0.2s ease-in-out;
+}
+.wins{
+   background-color: #222222;
+   color: #ffffff;
+   font-size: 33px;
+   padding: 7px 5px;
+   border: 2px solid #000000;
+}
+#winsFighter1{
+   border-right: none;
+   padding-right: 10px;
+   transition: 0.2s;
+}
+#winsFighter1::after{
+   content: 'X';
+   position: absolute;
+   font-size: 15px;
+   margin-top: 12px;
+   padding-left: 5px;
+}
+#winsFighter2{
+   border-left: none;
+   padding-left: 10px;
+   transition: 0.2s;
+}
+#othersInfo1{
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+}
+#othersInfo2{
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+}
+.name{
+   color: #ffffff;
+   background-color: #222222;
+   border: 2px solid #000000;
+   font-size: 20px;
+   padding: 0px 5px;
+}
+#nameFighter1{
+   position: relative;
+   top: -37px;
+   left: -35px;
+   padding-top: 5px;
+}
+#nameFighter2{
+   position: relative;
+   top: -37px;
+   left: 35px;
+   padding-top: 5px;
+}
+#hpFighter1, #hpFighter2{
+   color: #ffffff;
+   background-color: #222222;
+   border: 2px solid #000000;
+   font-size: 20px;
+   padding: 5px 12px;
+}
+#hpFighter1{
+   position: relative;
+   top: -37px;
+   left: -35px;
+}
+#hpFighter2{
+   position: relative;
+   top: -37px;
+   left: 35px;
+}
+.hpFighters span{
+   color: #14d814;
+}
+.powerInfo{
+   background-color: #222222;
+   color: #ffffff;
+   font-size: 20px;
+   padding: 3px 10px;
+   border: 2px solid #000000;
+   position: relative;
+   top: -37px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 3px;
+}
+.powerInfo img {
+   width: 23px;
+   filter: drop-shadow(1px 1px 1px #444444);
+}
+#powerFighter1, #powerFighter2{
+   display: flex;
+}
+#powerFighter1{
+   position: relative;
+   left: -34px;
+}
+#powerFighter2{
+   position: relative;
+   left: 34px;
+}
+.swipe{
+   background-color: #222222;
+   border: 2px solid #000000;
+   padding: 5px;
+   position: relative;
+   top: -36px;
+   width: 30px;
+   cursor: pointer;
+   transition: 0.2s;
+}
+.swipe:hover{
+   filter: brightness(1.2);
+}
+#reset{
+   background-color: #162153;
+   color: #ffffff;
+   font-size: 15px;
+   padding: 5px;
+   border: 2px solid #000000;
+   position: relative;
+   left: 195%;
+   cursor: pointer;
+}
+#reset:hover{
+   filter: brightness(1.2);
+}
+.visualArea {
+   padding: 3px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.imgArea{
+   height: 200px;
+}
+.img{
+   height: inherit;
+   margin-top: -20px;
+}
+#imgFighter2{
+   transform: scaleX(-1);
+}
+.attackBtn{
+   background-color: #971010;
+   color: #ffffff;
+   padding: 5px 7px;
+   border: 2px solid #000000;
+   margin: 5px;
+   font-size: 17px;
+   transition: 0.2s ease-in-out;
+   cursor: pointer;
+}
+.attackBtn:hover{
+   filter: brightness(1.2);
+}
+.log{
+   max-width: 1500px;
+   height: 205px;
+   margin: 0 auto;
+   background-color: #151515;
+   border: 3px solid #350303;
+   border-top: none;
+   overflow-y: scroll;
+   color: #ffffff;
+   padding: 5px 10px;
+   font-size: 17px;
+}
+.log::-webkit-scrollbar {
+   width: 12px;
+}
+.log::-webkit-scrollbar-track{
+   background: #222222;
+}
+.log::-webkit-scrollbar-thumb{
+   background: #444444;
+}
+.log span{
+   color: #ff0000;
+   font-size: 18px;
+}
+.log p{
+   color: #14d814;
+   display: inline;
+   font-size: 18px;
+}
+.log h1{
+   color: #14d814;
+   font-size: 22px;
+}
+@media screen and (min-width:1500px){
+   #fightArea{
+      margin-top: 10px;
+   }
+   .imgArea{
+      height: 270px;
+   }
+   .reset{
+      font-size: 18px;
+   }
+   .attackBtn{
+      font-size: 22px;
+      padding: 8px 10px;
+   }
+   .log{
+      height: 250px;
+   }
+}
+@media screen and (min-width:1750px){
+   #fightArea{
+      margin-top: 20px;
+   }
+   .log{
+      height: 330px;
+   }
+}

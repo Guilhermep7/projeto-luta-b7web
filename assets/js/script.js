@@ -1,0 +1,10 @@
+const fighter1 = createFighter1('BONIEKYY')
+const fighter2 = createFighter2('BLANKA')
+
+stage.start(
+   fighter1,
+   fighter2,
+   document.querySelector('#fighter1'),
+   document.querySelector('#fighter2'),
+   document.querySelector('#reset')
+)
