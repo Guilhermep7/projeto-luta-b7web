@@ -1,4 +1,4 @@
-const fighter1 = createFighter1('BONIEKYY')
+const fighter1 = createFighter1('BONIEKY')
 const fighter2 = createFighter2('BLANKA')
 
 stage.start(

@@ -10,20 +10,20 @@ const createFighter1 = () => {
    return {
       ...defaultFighter,
       name: 'BONIEKY',
-      life: 200,
-      maxLife: 200,
-      attack: 15,
-      defense: 8
+      life: 100,
+      maxLife: 100,
+      attack: 10,
+      defense: 7
    }
 }
-const createFighter2 = (name) => {
+const createFighter2 = () => {
    return {
       ...defaultFighter,
-      name: 'BLANKA',
-      life: 200,
-      maxLife: 200,
-      attack: 17,
-      defense: 6
+      name: "BLANKA",
+      life: 100,
+      maxLife: 100,
+      attack: 12,
+      defense: 5
    }
 }
 
