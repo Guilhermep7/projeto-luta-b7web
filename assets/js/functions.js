@@ -205,6 +205,8 @@ const stage = {
          setTimeout(() => {
             this.fighter1El.querySelector("#imgFighter1").style.filter = 'none'
          }, 700);
+      } else {
+         window.alert("Clique somente quando um dos personagens estiverem sem vida")
       }
    }
 }

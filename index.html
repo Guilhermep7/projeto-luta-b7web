@@ -9,66 +9,79 @@
 </head>
 <body>
    <main id="fightArea">
-      <section id="fighter1" class="fighters">
-         <div class="topInfo">
-            <div class="lifeBar">
-               <div class="bar"></div>
-            </div>
-            <span class="wins" id="winsFighter1">0</span>
-         </div>
-         <div class="othersInfo" id="othersInfo1">
-            <div id="powerFighter1">
-               <div id="reset">RESETAR</div>
-               <div class="powerInfo">
-                  <p id="attackPowerFighter1">10</p>
-                  <img src="assets/images/sword-icon.svg" alt="">
-               </div>
-               <div class="powerInfo">
-                  <p id="defensePowerFighter1">8</p>
-                  <img src="assets/images/shield-icon.svg" alt="">
+      <section class="topArea">
+         <div class="fighter1Info">
+            <div class="topInfo">
+               <div class="lifeBar">
+                  <div class="bar"></div>
                </div>
             </div>
-            <div class="hpFighters" id="hpFighter1">100 <span>HP</span></div>
-            <div class="name" id="nameFighter1">BONIEKY</div>
-         </div>
-         <div class="visualArea">
-            <div class="imgArea">
-               <img src="assets/images/imgBonieky.gif" id="imgFighter1" class="img" alt="imagem lutador 1">
+            <div class="othersInfo" id="othersInfo1">
+               <div id="powerFighter1">
+                  <div class="powerInfo">
+                     <p id="attackPowerFighter1">10</p>
+                     <img src="assets/images/sword-icon.svg" alt="">
+                  </div>
+                  <div class="powerInfo">
+                     <p id="defensePowerFighter1">8</p>
+                     <img src="assets/images/shield-icon.svg" alt="">
+                  </div>
+               </div>
+               <div class="hpFighters" id="hpFighter1">100 <span>HP</span></div>
+               <div class="name" id="nameFighter1">BONIEKY</div>
             </div>
-            <div class="btnArea">
-               <button class="attackBtn">ATACAR</button>
+         </div>
+         <div class="scoreArea">
+            <div class="score">
+               <span class="wins" id="winsFighter1">0</span>
+               <span class="x">x</span>
+               <span class="wins" id="winsFighter2">0</span>
+            </div>
+            <div id="reset">RESETAR</div>
+         </div>
+         <div class="fighter2Info">
+            <div class="topInfo">
+               <div class="lifeBar">
+                  <div class="bar"></div>
+               </div>
+            </div>
+            <div class="othersInfo" id="othersInfo2">
+               <div class="name" id="nameFighter2">BLANKA</div>
+               <div class="hpFighters" id="hpFighter2">100 <span>HP</span></div>
+               <div id="powerFighter2">
+                  <div class="powerInfo">
+                     <p id="attackPowerFighter2">12</p>
+                     <img src="assets/images/sword-icon.svg" alt="">
+                  </div>
+                  <div class="powerInfo">
+                     <p id="defensePowerFighter2">6</p>
+                     <img src="assets/images/shield-icon.svg" alt="">
+                  </div>
+               </div>
             </div>
          </div>
       </section>
-      <section id="fighter2" class="fighters">
-         <div class="topInfo">
-            <span class="wins" id="winsFighter2">0</span>
-            <div class="lifeBar">
-               <div class="bar"></div>
-            </div>
-         </div>
-         <div class="othersInfo" id="othersInfo2">
-            <div class="name" id="nameFighter2">BLANKA</div>
-            <div class="hpFighters" id="hpFighter2">100 <span>HP</span></div>
-            <div id="powerFighter2">
-               <div class="powerInfo">
-                  <p id="attackPowerFighter2">12</p>
-                  <img src="assets/images/sword-icon.svg" alt="">
+      <section class="fightBox">
+         <section id="fighter1" class="fighters">
+            <div class="visualArea">
+               <div class="imgArea">
+                  <img src="assets/images/imgBonieky.gif" id="imgFighter1" class="img" alt="imagem lutador 1">
                </div>
-               <div class="powerInfo">
-                  <p id="defensePowerFighter2">6</p>
-                  <img src="assets/images/shield-icon.svg" alt="">
+               <div class="btnArea">
+                  <button class="attackBtn">ATACAR</button>
                </div>
             </div>
-         </div>
-         <div class="visualArea">
-            <div class="imgArea">
-               <img src="assets/images/imgBlanka.gif" id="imgFighter2" class="img" alt="imagem lutador 2">
+         </section>
+         <section id="fighter2" class="fighters">
+            <div class="visualArea">
+               <div class="imgArea">
+                  <img src="assets/images/imgBlanka.gif" id="imgFighter2" class="img" alt="imagem lutador 2">
+               </div>
+               <div class="btnArea">
+                  <button class="attackBtn">ATACAR</button>
+               </div>
             </div>
-            <div class="btnArea">
-               <button class="attackBtn">ATACAR</button>
-            </div>
-         </div>
+         </section>
       </section>
    </main>
    <section class="logSection">

@@ -20,7 +20,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   flex-direction: row;
+   flex-direction: column;
    max-width: 1500px;
    margin: 0 auto;
    padding: 5px;
@@ -35,7 +35,29 @@ body {
 #imgFighter1, #imgFighter2{
    transition: 0.2s;
 }
+.topArea{
+   display: flex;
+   color: #ffffff;
+   width: 100%;
+}
+.fightBox{
+   display: flex;
+   width: 100%;
+}
 .topInfo{
+   display: flex;
+   width: 100%;
+}
+.fighter1Info{
+   display: flex;
+   align-items: end;
+}
+.fighter1Info, .fighter2Info{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+.othersInfo{
    display: flex;
 }
 .lifeBar {
@@ -50,132 +72,33 @@ body {
    height: 100%;
    transition: 0.2s ease-in-out;
 }
-.wins{
-   background-color: #222222;
-   color: #ffffff;
-   font-size: 33px;
-   padding: 7px 5px;
-   border: 2px solid #000000;
+.powerInfo, .hpFighters, .name{
+   display: inline-flex;
+   background-color: #151515;
+   border: 1px solid #000000;
+   padding: 3px 5px;
+   margin: 0;
+   font-size: 18px;
 }
-#winsFighter1{
-   border-right: none;
-   padding-right: 10px;
-   transition: 0.2s;
+.scoreArea{
+   background-color: #151515;
 }
-#winsFighter1::after{
-   content: 'X';
-   position: absolute;
-   font-size: 15px;
-   margin-top: 12px;
-   padding-left: 5px;
-}
-#winsFighter2{
-   border-left: none;
-   padding-left: 10px;
-   transition: 0.2s;
-}
-#othersInfo1{
-   width: 100%;
+.score{
    display: flex;
-   justify-content: flex-end;
-}
-#othersInfo2{
-   width: 100%;
-   display: flex;
-   justify-content: flex-start;
-}
-.name{
-   color: #ffffff;
-   background-color: #222222;
-   border: 2px solid #000000;
-   font-size: 20px;
-   padding: 0px 5px;
-}
-#nameFighter1{
-   position: relative;
-   top: -37px;
-   left: -35px;
-   padding-top: 5px;
-}
-#nameFighter2{
-   position: relative;
-   top: -37px;
-   left: 35px;
-   padding-top: 5px;
-}
-#hpFighter1, #hpFighter2{
-   color: #ffffff;
-   background-color: #222222;
-   border: 2px solid #000000;
-   font-size: 20px;
-   padding: 5px 12px;
-}
-#hpFighter1{
-   position: relative;
-   top: -37px;
-   left: -35px;
-}
-#hpFighter2{
-   position: relative;
-   top: -37px;
-   left: 35px;
-}
-.hpFighters span{
-   color: #14d814;
-}
-.powerInfo{
-   background-color: #222222;
-   color: #ffffff;
-   font-size: 20px;
-   padding: 3px 10px;
-   border: 2px solid #000000;
-   position: relative;
-   top: -37px;
-   display: flex;
-   align-items: center;
    justify-content: center;
-   gap: 3px;
+   align-items: center;
+   font-size: 20px;
 }
-.powerInfo img {
-   width: 23px;
-   filter: drop-shadow(1px 1px 1px #444444);
-}
-#powerFighter1, #powerFighter2{
-   display: flex;
-}
-#powerFighter1{
-   position: relative;
-   left: -34px;
-}
-#powerFighter2{
-   position: relative;
-   left: 34px;
-}
-.swipe{
-   background-color: #222222;
-   border: 2px solid #000000;
-   padding: 5px;
-   position: relative;
-   top: -36px;
-   width: 30px;
-   cursor: pointer;
-   transition: 0.2s;
-}
-.swipe:hover{
-   filter: brightness(1.2);
+.score .wins{
+   font-size: 30px;
+   padding: 1px 3px;
 }
 #reset{
-   background-color: #162153;
-   color: #ffffff;
+   background-color: #971010;
    font-size: 15px;
    padding: 5px;
-   border: 2px solid #000000;
-   position: relative;
-   left: 195%;
    cursor: pointer;
-}
-#reset:hover{
-   filter: brightness(1.2);
+   border: 1px solid #000000;
 }
 .visualArea {
    padding: 3px;
