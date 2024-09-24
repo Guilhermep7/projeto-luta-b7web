@@ -31,6 +31,9 @@ body {
 }
 #fighter1, #fighter2 {
    flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 #imgFighter1, #imgFighter2{
    transition: 0.2s;
@@ -131,7 +134,7 @@ body {
    margin-top: -20px;
 }
 #imgFighter2{
-   transform: scaleX(-1);
+   transform: scaleX(-1) translateX(50px);
 }
 .attackBtn{
    background-color: #971010;

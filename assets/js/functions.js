@@ -55,7 +55,7 @@ const stage = {
             this.doAttack(fighter2, fighter1)
          }
          if(evt.key == 'r'){
-            resetFighters()
+            this.resetFighters()
          }
       })
       this.update()
@@ -146,17 +146,17 @@ const stage = {
    },
    moveFighter1img(){
       if(this.fighter1.life > 0){
-         this.fighter1El.querySelector('#imgFighter1').style.marginLeft = '200px'
+         this.fighter1El.querySelector('#imgFighter1').style.transform = 'translate(200px)'
          setTimeout(() => {
-            this.fighter1El.querySelector('#imgFighter1').style.marginLeft = '0px'
+            this.fighter1El.querySelector('#imgFighter1').style.transform = 'translate(0px)'
          }, 700)
       }
    },
    moveFighter2img(){
       if(this.fighter2.life > 0){
-         this.fighter2El.querySelector('#imgFighter2').style.marginRight = '200px'
+         this.fighter2El.querySelector('#imgFighter2').style.transform = 'translate(-200px)'
          setTimeout(() => {
-            this.fighter2El.querySelector('#imgFighter2').style.marginRight = '0px'
+            this.fighter2El.querySelector('#imgFighter2').style.transform = 'scaleX(-1) translateX(0px)'
          }, 700)
       }
    },
@@ -197,19 +197,19 @@ const stage = {
          this.fighter2El.querySelector('#imgFighter2').setAttribute('src', 'assets/images/blankaReset.gif');
          setTimeout(() => {
             this.fighter2El.querySelector('#imgFighter2').setAttribute('src', 'assets/images/imgBlanka.gif')
-         }, 800)
+         }, 900)
          this.fighter2El.querySelector('#imgFighter2').style.filter = 'drop-shadow(0px 0px 15px #14d814'
          setTimeout(() => {
             this.fighter2El.querySelector('#imgFighter2').style.filter = 'none'
-         }, 700);
+         }, 800);
          this.fighter1El.querySelector('#imgFighter1').setAttribute('src', 'assets/images/boniekyReset.gif');
          setTimeout(() => {
             this.fighter1El.querySelector('#imgFighter1').setAttribute('src', 'assets/images/imgBonieky.gif')
-         }, 800)
+         }, 900)
          this.fighter1El.querySelector('#imgFighter1').style.filter = 'drop-shadow(0px 0px 15px #14d814'
          setTimeout(() => {
             this.fighter1El.querySelector("#imgFighter1").style.filter = 'none'
-         }, 700);
+         }, 800);
       } else {
          window.alert("Clique somente quando um dos personagens estiverem sem vida")
       }
