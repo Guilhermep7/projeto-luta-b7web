@@ -93,6 +93,11 @@ const stage = {
       if(actualAttack > actualDefense){
          attacked.life -= actualAttack
          attacked.life = attacked.life < 0 ? 0 : attacked.life
+         if(actualAttack >= 18){
+            const audioChaves = document.querySelector('#audioChaves')
+            audioChaves.currentTime = 0
+            audioChaves.play()
+         }
          log.addMessage(`${attacking.name} causou ${actualAttack.toFixed(1)} de <span>dano</span> em ${attacked.name}`)
       } else {
          log.addMessage(`${attacked.name} conseguiu <p>defender</p>`)
