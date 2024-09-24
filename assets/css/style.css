@@ -62,6 +62,7 @@ body {
 }
 .hpFighters span{
    color: #14d814;
+   padding: 0px 2px;
 }
 #powerFighter1, #powerFighter2{
    display: flex;
@@ -75,7 +76,6 @@ body {
 }
 .bar {
    background-color: #14d814;
-   width: 75%;
    height: 100%;
    transition: 0.2s ease-in-out;
 }
@@ -108,7 +108,7 @@ body {
 #reset{
    background-color: #161d53;
    font-size: 17px;
-   padding: 7px;
+   padding: 7px 9px;
    cursor: pointer;
    border: 1px solid #000000;
    transition: 0.2s;

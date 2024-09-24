@@ -10,8 +10,8 @@ const createFighter1 = () => {
    return {
       ...defaultFighter,
       name: 'BONIEKY',
-      life: 100,
-      maxLife: 100,
+      life: 150,
+      maxLife: 150,
       attack: 10,
       defense: 7
    }
@@ -20,10 +20,10 @@ const createFighter2 = () => {
    return {
       ...defaultFighter,
       name: "BLANKA",
-      life: 100,
-      maxLife: 100,
-      attack: 12,
-      defense: 5
+      life: 150,
+      maxLife: 150,
+      attack: 11,
+      defense: 6
    }
 }
 
@@ -33,11 +33,13 @@ const stage = {
    fighter1El: null,
    fighter2El: null,
 
-   start(fighter1, fighter2, fighter1El, fighter2El, resetEl){
+   start(fighter1, fighter2, fighter1El, fighter2El, fighter1Info, fighter2Info, resetEl){
       this.fighter1 = fighter1
       this.fighter2 = fighter2
       this.fighter1El = fighter1El
       this.fighter2El = fighter2El
+      this.fighter1Info = fighter1Info
+      this.fighter2Info = fighter2Info
       this.fighter1ScoreEl = document.querySelector('#winsFighter1')
       this.fighter2ScoreEl = document.querySelector('#winsFighter2')
       this.resetEl = resetEl
@@ -60,29 +62,19 @@ const stage = {
       this.checkScore = true
    },
    update(){
-      this.fighter1El.querySelector('#nameFighter1').innerHTML = `${this.fighter1.name}`
-      this.fighter1El.querySelector('#hpFighter1').innerHTML = `${this.fighter1.life.toFixed(1)} <span>HP</span>`
-      this.fighter1El.querySelector('#attackPowerFighter1').innerHTML = `${this.fighter1.attack}`
-      this.fighter1El.querySelector('#defensePowerFighter1').innerHTML = `${this.fighter1.defense}`
+      this.fighter1Info.querySelector('#nameFighter1').innerHTML = `${this.fighter1.name}`
+      this.fighter1Info.querySelector('#hpFighter1').innerHTML = `${this.fighter1.life.toFixed(1)} <span>HP</span>`
+      this.fighter1Info.querySelector('#attackPowerFighter1').innerHTML = `${this.fighter1.attack}`
+      this.fighter1Info.querySelector('#defensePowerFighter1').innerHTML = `${this.fighter1.defense}`
       let f1Pct = (this.fighter1.life / this.fighter1.maxLife) * 100
-      this.fighter1El.querySelector('.bar').style.width = `${f1Pct}%`
+      this.fighter1Info.querySelector('.bar').style.width = `${f1Pct}%`
 
-      this.fighter2El.querySelector('#nameFighter2').innerHTML = `${this.fighter2.name}`
-      this.fighter2El.querySelector('#hpFighter2').innerHTML = `${this.fighter2.life.toFixed(1)} <span>HP</span>`
-      this.fighter2El.querySelector('#attackPowerFighter2').innerHTML = `${this.fighter2.attack}`
-      this.fighter2El.querySelector('#defensePowerFighter2').innerHTML = `${this.fighter2.defense}`
+      this.fighter2Info.querySelector('#nameFighter2').innerHTML = `${this.fighter2.name}`
+      this.fighter2Info.querySelector('#hpFighter2').innerHTML = `${this.fighter2.life.toFixed(1)} <span>HP</span>`
+      this.fighter2Info.querySelector('#attackPowerFighter2').innerHTML = `${this.fighter2.attack}`
+      this.fighter2Info.querySelector('#defensePowerFighter2').innerHTML = `${this.fighter2.defense}`
       let f2Pct = (this.fighter2.life / this.fighter2.maxLife) * 100
-      this.fighter2El.querySelector('.bar').style.width = `${f2Pct}%`
-
-      if(this.fighter1.life <= 200){
-         this.resetEl.style.left = '195%'
-      }
-      if(this.fighter1.life < 100){
-         this.resetEl.style.left = '190%'
-      }
-      if(this.fighter1.life < 10){
-         this.resetEl.style.left = '185%'
-      }
+      this.fighter2Info.querySelector('.bar').style.width = `${f2Pct}%`
 
    },
    doAttack(attacking, attacked){
@@ -197,10 +189,18 @@ const stage = {
          this.update()
          let audioFight = document.querySelector('#audioFight')
          audioFight.play()
+         this.fighter2El.querySelector('#imgFighter2').setAttribute('src', 'assets/images/blankaReset.gif');
+         setTimeout(() => {
+            this.fighter2El.querySelector('#imgFighter2').setAttribute('src', 'assets/images/imgBlanka.gif')
+         }, 800)
          this.fighter2El.querySelector('#imgFighter2').style.filter = 'drop-shadow(0px 0px 15px #14d814'
          setTimeout(() => {
             this.fighter2El.querySelector('#imgFighter2').style.filter = 'none'
          }, 700);
+         this.fighter1El.querySelector('#imgFighter1').setAttribute('src', 'assets/images/boniekyReset.gif');
+         setTimeout(() => {
+            this.fighter1El.querySelector('#imgFighter1').setAttribute('src', 'assets/images/imgBonieky.gif')
+         }, 800)
          this.fighter1El.querySelector('#imgFighter1').style.filter = 'drop-shadow(0px 0px 15px #14d814'
          setTimeout(() => {
             this.fighter1El.querySelector("#imgFighter1").style.filter = 'none'

@@ -6,5 +6,7 @@ stage.start(
    fighter2,
    document.querySelector('#fighter1'),
    document.querySelector('#fighter2'),
+   document.querySelector('.fighter1Info'),
+   document.querySelector('.fighter2Info'),
    document.querySelector('#reset')
 )
