@@ -10,8 +10,8 @@ const createFighter1 = () => {
    return {
       ...defaultFighter,
       name: 'BONIEKY',
-      life: 150,
-      maxLife: 150,
+      life: 100,
+      maxLife: 100,
       attack: 10,
       defense: 7
    }
@@ -20,8 +20,8 @@ const createFighter2 = () => {
    return {
       ...defaultFighter,
       name: "BLANKA",
-      life: 150,
-      maxLife: 150,
+      life: 100,
+      maxLife: 100,
       attack: 11,
       defense: 6
    }
@@ -120,7 +120,7 @@ const stage = {
       if(attacking == this.fighter1){
          this.fighter1El.querySelector('#imgFighter1').setAttribute('src', 'assets/images/boniekyAttack.gif')
          setTimeout(() => {
-            this.fighter1El.querySelector('#imgFighter1').setAttribute('src', 'assets/images/imgbonieky.gif')
+            this.fighter1El.querySelector('#imgFighter1').setAttribute('src', 'assets/images/imgBonieky.gif')
          }, 700);
          this.moveFighter1img()
          const audioFighter1 = document.querySelector('#audioFighter1')
