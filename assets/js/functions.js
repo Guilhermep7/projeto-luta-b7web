@@ -93,11 +93,6 @@ const stage = {
       if(actualAttack > actualDefense){
          attacked.life -= actualAttack
          attacked.life = attacked.life < 0 ? 0 : attacked.life
-         if(actualAttack >= 18){
-            const audioChaves = document.querySelector('#audioChaves')
-            audioChaves.currentTime = 0
-            audioChaves.play()
-         }
          log.addMessage(`${attacking.name} causou ${actualAttack.toFixed(1)} de <span>dano</span> em ${attacked.name}`)
       } else {
          log.addMessage(`${attacked.name} conseguiu <p>defender</p>`)
@@ -123,9 +118,15 @@ const stage = {
             this.fighter1El.querySelector('#imgFighter1').setAttribute('src', 'assets/images/imgBonieky.gif')
          }, 700);
          this.moveFighter1img()
-         const audioFighter1 = document.querySelector('#audioFighter1')
-         audioFighter1.currentTime = 0
-         audioFighter1.play()
+         if(actualAttack >= 18){
+            const audioChaves = document.querySelector('#audioChaves')
+            audioChaves.currentTime = 0
+            audioChaves.play()
+         } else {
+            const audioFighter1 = document.querySelector('#audioFighter1')
+            audioFighter1.currentTime = 0
+            audioFighter1.play()
+         }
       }
       if(attacking == this.fighter2){
          this.fighter2El.querySelector('#imgFighter2').setAttribute('src', 'assets/images/blankaAttack.gif')
@@ -137,9 +138,15 @@ const stage = {
             this.fighter2El.querySelector('#imgFighter2').style.transform = 'scaleX(-1)'
          }, 700)
          this.moveFighter2img()
-         const audioFighter2 = document.querySelector('#audioFighter2')
-         audioFighter2.currentTime = 0
-         audioFighter2.play()
+         if(actualAttack >= 18){
+            const audioChaves = document.querySelector('#audioChaves')
+            audioChaves.currentTime = 0
+            audioChaves.play()
+         } else {
+            const audioFighter2 = document.querySelector('#audioFighter2')
+            audioFighter2.currentTime = 0
+            audioFighter2.play()
+         }
       }
       this.update()
       this.updateScore()
