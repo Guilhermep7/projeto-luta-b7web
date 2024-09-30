@@ -183,32 +183,3 @@ body {
    color: #14d814;
    font-size: 22px;
 }
-@media screen and (min-width:1500px){
-   #fightArea{
-      margin-top: 10px;
-   }
-   .imgArea{
-      height: 260px;
-      margin-top: 15px;
-   }
-   .attackBtn{
-      font-size: 22px;
-      padding: 8px 10px;
-   }
-   .log{
-      height: 250px;
-   }
-}
-@media screen and (min-width:1750px){
-   #fightArea{
-      margin-top: 20px;
-   }
-   .imgArea{
-      height: 260px;
-      margin-top: 40px;
-   }
-   .log{
-      height: 330px;
-      font-size: 20px;
-   }
-}
