@@ -1,13 +1,26 @@
-@media screen and (max-width:400px){
+@media screen and (max-width:425px){
    .topArea{
       width: 100vw;
       flex-direction: column;
       justify-content: center;
       align-items: center;
    }
+   #othersInfo1{
+      display: flex;
+      justify-content: flex-start;
+   }
+   #othersInfo2{
+      justify-content: flex-end;
+   }
+   .powerInfo, .hpFighters, .name{
+      font-size: 15px;
+   }
+   .powerInfo img{
+      width: 15px;
+   }
    .scoreArea{
       position: absolute;
-      top: 120px;
+      top: 106px;
    }
    .score{
       font-size: 15px;
@@ -21,6 +34,33 @@
    }
    .fightBox{
       margin-top: 100px;
+   }
+   #fighter1{
+      justify-content: flex-start;
+      padding-left: 10px;
+   }
+   #fighter2{
+      justify-content: flex-end;
+      padding-right: 10px;
+   }
+   .imgArea{
+      height: 150px;
+   }
+   #imgFighter2{
+      transform: scaleX(-1) translateX(10px);
+   }
+   .attackBtn{
+      font-size: 12px;
+      padding: 5px;
+   }
+   .log{
+      height: 300px;
+   }
+   .log p{
+      font-size: 15px;
+   }
+   .log h1{
+      font-size: 17px;
    }
 }
 @media screen and (min-width:1500px) and (max-width: 1750px){
