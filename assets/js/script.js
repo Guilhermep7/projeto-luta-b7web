@@ -10,3 +10,11 @@ stage.start(
    document.querySelector('.fighter2Info'),
    document.querySelector('#reset')
 )
+
+function checkOrientation() {
+   if (window.matchMedia("(orientation: portrait)").matches) {
+       alert("Por favor, inverta o celular para modo paisagem.");
+   }
+}
+checkOrientation();
+window.addEventListener("orientationchange", checkOrientation);
